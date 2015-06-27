@@ -37,7 +37,6 @@ function num2Ip($ipNum)
     return implode(".", $ipArray);
 }
 
-
 function traverseIp($startIp, $endIp, $callback)
 {
     $ipStartNum = ip2Num($startIp);
@@ -49,11 +48,9 @@ function traverseIp($startIp, $endIp, $callback)
     }
     
     for( $ip=$ipStartNum; $ip<=$ipEndNum; $ip++) {
-        
         $callback(num2Ip($ip));
     }
 }
-
 
 //example
 $ipEnd = "1.1.1.45";
